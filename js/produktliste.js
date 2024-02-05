@@ -16,7 +16,6 @@ function showproduct(product) {
 
   //ændre indhold
   copy.querySelector(".product_name").textContent = product.productdisplayname;
-
   copy.querySelector(".price").textContent = `${product.price} DKK `;
   copy.querySelector(".product_brand").textContent = product.brandname;
   copy.querySelector(
@@ -28,6 +27,25 @@ function showproduct(product) {
   if (product.soldout) {
     //produktet er udsolgt
     copy.querySelector("article").classList.add("soldout");
+    copy.querySelector(".soldout").classList.remove("hide");
+  }
+
+  if (product.discount) {
+    //fjern klassen
+    copy.querySelector(".newprice").classList.remove("hide");
+    copy.querySelector(".originalprice").classList.remove("hide");
+    copy.querySelector(".price").classList.add("hide");
+
+    //
+    copy.querySelector(".newprice").textContent = `${(
+      product.price -
+      (product.discount / 100) * product.price
+    ).toFixed(0)} DKK `;
+    copy.querySelector(".originalprice").textContent = `${product.price} DKK`;
+
+    //
+    copy.querySelector("article").classList.add("sale");
+    copy.querySelector(".sale").classList.remove("hide");
   }
 
   /*   if (product.sale) {

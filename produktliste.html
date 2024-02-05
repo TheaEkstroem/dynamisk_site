@@ -20,17 +20,27 @@
         </ul>
       </nav>
     </header>
-    <h2>Puma</h2>
+    <h2 class="product_h2">Produkter</h2>
 
     <main class="productlist">
       <template id="product_template">
         <article class="product_article">
           <a href="produkt.html">
-            <img src="img/1535-kopi.webp" alt="Product Image" />
-            <p class="product_brand"></p>
+            <div class="productlist_img">
+              <img src="img/1535-kopi.webp" alt="Product Image" />
+              <div class="sale hide"></div>
+              <div class="soldout hide"></div>
+            </div>
+
+            <p class="product_brand">Puma</p>
             <h3 class="product_name">Puma T-shirt</h3>
             <p class="price">Price</p>
           </a>
+
+          <div class="onsale">
+            <p class="newprice hide"></p>
+            <p class="originalprice hide"></p>
+          </div>
         </article>
       </template>
     </main>

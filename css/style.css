@@ -1,5 +1,11 @@
+/* samme skrift type på hele sitet*/
 body {
   font-family: monospace;
+}
+
+/* h2 på produktliste.html (overskriften) */
+.product_h2 {
+  margin: 2%;
 }
 
 /* logo nav */
@@ -69,12 +75,6 @@ a {
   margin-bottom: 0px;
 }
 
-/* .product_description {
-  font-size: 14px;
-  color: #666;
-}
-
-
 /* Udsolgt tekst */
 article.soldout img {
   opacity: 0.5;
@@ -89,22 +89,40 @@ img {
 article.soldout::before {
   content: "Sold Out";
   position: absolute;
-  padding: 0.5rem;
   z-index: 1;
 
+  /*  padding: 0.5rem;
   margin-top: 1.9%;
-  font-size: 18px;
+  font-size: 18px; */
   background-color: rgba(128, 128, 128);
   color: rgb(240, 240, 240);
 }
 
 /* sale tekst */
-article.sale::before {
-  content: "Sold Out";
+.productlist_img {
+  position: relative;
+  display: inline-block;
+}
+
+article.sale::after {
+  content: "Deal";
+  position: absolute;
+  z-index: 1;
+
+  /*padding: 0.5rem;
+  margin-top: -30%;
+
+ */
+  background-color: rgb(213, 35, 35);
+  color: white;
+}
+/* 
+
+article.sale::after {
+  content: "Deal";
   position: absolute;
   padding: 0.5rem;
   z-index: 1;
-
   bottom: 10px;
   left: 1px;
   margin-top: 1.9%;
@@ -112,7 +130,7 @@ article.sale::before {
   background-color: rgb(213, 35, 35);
   color: rgb(240, 240, 240);
 }
-
+ */
 .sale-label {
   position: absolute;
   font-size: 18px;
