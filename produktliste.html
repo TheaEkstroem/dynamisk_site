@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <title>Produktliste</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="img/logo-kopi.webp" alt="Logo" /></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="kategori.html">Category</a></li>
+          <li><a href="produktliste.html">Productlist</a></li>
+          <li><a href="produkt.html">Product</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2>Puma</h2>
+
+    <main class="productlist">
+      <template id="product_template">
+        <article class="product_article">
+          <a href="produkt.html">
+            <img src="img/1535-kopi.webp" alt="Product Image" />
+            <p class="product_brand"></p>
+            <h3 class="product_name">Puma T-shirt</h3>
+            <p class="price">Price</p>
+          </a>
+        </article>
+      </template>
+    </main>
+    <!-- 
+    <article class="product_card sale">
+      <a href="produkt.html">
+        <div class="image-container">
+          <img src="img/1535-kopi.webp" alt="Product Image" />
+          <div class="rabat-label">Deal</div>
+        </div>
+        <p class="product_brand">Puma</p>
+
+        <h3>Capri Pants</h3>
+        <div class="sale_price">
+          <p class="newprice">New Price</p>
+
+          <p class="oldprice">Old Price</p>
+        </div>
+      </a>
+    </article> -->
+
+    <footer></footer>
+    <script src="js/produktliste.js"></script>
+  </body>
+</html>

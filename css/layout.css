@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fffffe;
+  margin: 2%;
+}
+
+main {
+  margin: 2%;
+}
+
+image {
+  max-width: 100%;
+}
+
+/* responsivt */
+@media screen and (min-width: 920px) {
+  .productlist {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) /* repeat(auto-fill, minmax(150px, 290px)) */;
+    gap: 2rem;
+  }
+
+  .category {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr /* repeat(3, 1fr) */;
+    gap: 2rem;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 2%;
+  }
+}
