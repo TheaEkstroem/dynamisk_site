@@ -69,6 +69,8 @@ a {
 
 .productlist_img {
   position: relative;
+  display: inline-block;
+
   /*   width: 100%;
   height: auto;
   margin-bottom: 2px; */
@@ -81,7 +83,9 @@ a {
 .product_article {
   display: flex;
   flex-direction: column;
-  position: relative;
+  border: solid #f1f1f161;
+  /*   position: relative;
+ */
 }
 
 /* Udsolgt tekst */
@@ -115,14 +119,16 @@ article.soldout img {
   color: rgb(240, 240, 240);
 } */
 
+/* det her er den rigtige */
+
 .soldout::before {
+  position: absolute;
   content: "Sold Out";
   font-size: 18px;
-  position: absolute;
   z-index: 10;
   padding: 0.5rem;
-  background-color: rgba(128, 128, 128);
-  color: rgb(240, 240, 240);
+  background-color: rgba(58, 58, 58, 0.506);
+  color: rgb(255, 255, 255);
 }
 
 /* sale tekst */
@@ -139,14 +145,16 @@ article.soldout img {
 
 .sale::after {
   font-size: 18px;
-  position: absolute;
-  top: 60%;
-  right: 10px;
+  /*   position: absolute;
+ */
+  justify-content: center;
+  text-align: center;
   z-index: 10;
+  margin-bottom: 10px;
   content: "Deal";
-  background-color: rgb(213, 35, 35);
-  color: white;
-  padding: 0.5rem;
+  background-color: rgba(233, 43, 43, 0.889);
+  color: rgb(255, 255, 255);
+  padding: 0.2rem;
 }
 /*
 
