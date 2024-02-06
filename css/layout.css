@@ -11,15 +11,17 @@ main {
   margin: 2%;
 }
 
-image {
+img {
   max-width: 100%;
+  height: auto;
+  margin-bottom: 2px;
 }
 
 /* responsivt */
 @media screen and (min-width: 920px) {
   .productlist {
     display: grid;
-    grid-template-columns: repeat(4, 1fr) /* repeat(auto-fill, minmax(150px, 290px)) */;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
     gap: 2rem;
   }
 

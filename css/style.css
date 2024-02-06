@@ -59,20 +59,29 @@ a {
 }
 
 /* Produktliste siden */
+.hide {
+  display: none;
+}
 
 .productlist {
   padding: 20px;
 }
 
-.productlist img {
-  width: 100%;
+.productlist_img {
+  position: relative;
+  /*   width: 100%;
   height: auto;
-  margin-bottom: 2px;
+  margin-bottom: 2px; */
 }
 
 .productlist h3 {
   font-size: 20px;
   margin-bottom: 0px;
+}
+.product_article {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 /* Udsolgt tekst */
@@ -80,43 +89,66 @@ article.soldout img {
   opacity: 0.5;
 }
 
-img {
+/* img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+ */
+/* .soldout {
+  position: absolute;
+  background-color: rgba(128, 128, 128);
+  color: rgb(240, 240, 240);
+  z-index: 1;
+  content: "Sold Out";
+  padding: 10px 7px;
+} */
 
-article.soldout::before {
+/* article */
+/* .soldout::before {
   content: "Sold Out";
   position: absolute;
   z-index: 1;
+  padding: 0.5rem;
+  font-size: 18px;
+  background-color: rgba(128, 128, 128);
+  color: rgb(240, 240, 240);
+} */
 
-  /*  padding: 0.5rem;
-  margin-top: 1.9%;
-  font-size: 18px; */
+.soldout::before {
+  content: "Sold Out";
+  font-size: 18px;
+  position: absolute;
+  z-index: 10;
+  padding: 0.5rem;
   background-color: rgba(128, 128, 128);
   color: rgb(240, 240, 240);
 }
 
 /* sale tekst */
-.productlist_img {
+/* .productlist_img {
   position: relative;
   display: inline-block;
+} */
+
+.onsale {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
 }
 
-article.sale::after {
-  content: "Deal";
+.sale::after {
+  font-size: 18px;
   position: absolute;
-  z-index: 1;
-
-  /*padding: 0.5rem;
-  margin-top: -30%;
-
- */
+  top: 60%;
+  right: 10px;
+  z-index: 10;
+  content: "Deal";
   background-color: rgb(213, 35, 35);
   color: white;
+  padding: 0.5rem;
 }
-/* 
+/*
 
 article.sale::after {
   content: "Deal";
@@ -131,26 +163,15 @@ article.sale::after {
   color: rgb(240, 240, 240);
 }
  */
-.sale-label {
-  position: absolute;
-  font-size: 18px;
-  bottom: 10px;
-  left: 1px;
-  background-color: rgb(213, 35, 35);
-  padding: 3px 7px;
-  color: white;
-}
 
 /* pris forskel */
 .sale_price {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  /*   justify-content: space-between;
-   */
 }
 
-.oldprice {
+.originalprice {
   color: #666;
   text-decoration: line-through;
 }
